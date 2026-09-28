@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Collections | AMORA BOUTIQUE</title>
+    <meta name="description" content="Explore luxury women's dresses, blouses, tailored trousers, and handcrafted jewelry designed for timeless elegance.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ANNOUNCEMENT BAR
+    ====================================================== -->
+    <div class="announcement-bar">
+        <span>Complimentary tracked shipping on orders over $100</span>
+        
+    </div>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span>AMORA</span>
+                <small>BOUTIQUE</small>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="wishlist.html" class="header-icon-link" aria-label="View Wishlist" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-count header-icon-count">0</span>
+                </a>
+
+                <a href="cart.html" class="header-icon-link" aria-label="View Shopping Bag" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count header-icon-count">0</span>
+                </a>
+
+                <button type="button" class="mobile-menu-button" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer & Backdrop -->
+    <div class="mobile-nav-overlay"></div>
+    <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+            <div class="logo">
+                <span>AMORA</span>
+                <small>BOUTIQUE</small>
+            </div>
+            <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+        </div>
+
+        <nav class="mobile-drawer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">All Collections</a>
+            <a href="shop.html?category=dresses">Dresses</a>
+            <a href="shop.html?category=tops">Tops & Blouses</a>
+            <a href="shop.html?category=bottoms">Trousers & Skirts</a>
+            <a href="shop.html?category=accessories">Jewelry & Accessories</a>
+            <a href="about.html">Our Atelier Story</a>
+            <a href="contact.html">Concierge & Contact</a>
+        </nav>
+
+        <div class="mobile-drawer-footer">
+            <p>hello@amoraboutique.com</p>
+            <p>+94 77 123 4567 • Colombo, Sri Lanka</p>
+        </div>
+    </aside>
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+    <main>
+        <section class="shop-header">
+            <div class="container">
+                <span class="eyebrow">THE PERMANENT COLLECTION</span>
+                <h1>Couture & Ready-to-Wear</h1>
+                <p>Explore handcrafted garments fashioned from pure silk, organic linen, and merino wool for timeless confidence.</p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SHOP MAIN SECTION
+        ====================================================== -->
+        <section class="section" style="padding-top: 40px;">
+            <div class="container">
+
+                <!-- Interactive Category Filter Pills -->
+                <div class="category-pills">
+                    <button type="button" class="category-pill is-active" data-category="all">All Pieces</button>
+                    <button type="button" class="category-pill" data-category="dresses">Dresses</button>
+                    <button type="button" class="category-pill" data-category="tops">Tops & Blouses</button>
+                    <button type="button" class="category-pill" data-category="bottoms">Bottoms</button>
+                    <button type="button" class="category-pill" data-category="accessories">Accessories</button>
+                </div>
+
+                <!-- Search & Sorting Controls -->
+                <div class="shop-toolbar">
+                    <div class="shop-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="product-search" placeholder="Search by piece name, fabric, or style..." autocomplete="off">
+                    </div>
+
+                    <div class="shop-filter-group">
+                        <select id="category-filter" class="shop-select" aria-label="Category Selection">
+                            <option value="all">All Categories</option>
+                            <option value="dresses">Dresses</option>
+                            <option value="tops">Tops & Blouses</option>
+                            <option value="bottoms">Bottoms</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+
+                        <select id="sort-products" class="shop-select" aria-label="Sort Pieces">
+                            <option value="featured">Sort: Featured</option>
+                            <option value="low">Price: Low to High</option>
+                            <option value="high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="name">Alphabetical (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Counter Meta -->
+                <div class="shop-meta-row">
+                    <span id="product-count">Loading collection...</span>
+                    <span style="font-size: 13px; color: var(--color-rose);"><i class="fa-solid fa-sparkles"></i> Hand-finished tailoring</span>
+                </div>
+
+                <!-- Dynamic Products Grid -->
+                <div class="product-grid" id="shop-products"></div>
+
+                <!-- Zero Search State -->
+                <div class="shop-empty-state" id="no-products">
+                    <i class="fa-regular fa-folder-open"></i>
+                    <h3>No Matching Pieces</h3>
+                    <p>We couldn't find any designs matching your specific filters. Try searching for silk, satin, or exploring another category.</p>
+                    <button type="button" class="btn btn-outline" id="clear-filters-btn">Clear All Filters</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span>AMORA</span>
+                        <small>BOUTIQUE</small>
+                    </a>
+                    <p>
+                        Effortless elegance for the modern woman. Timeless couture silhouettes crafted with certified sustainable textiles and mindful artistry.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Collections</h4>
+                    <a href="shop.html?category=dresses">Silk & Evening Dresses</a>
+                    <a href="shop.html?category=tops">Feminine Tops & Blouses</a>
+                    <a href="shop.html?category=bottoms">Tailored Bottoms</a>
+                    <a href="shop.html?category=accessories">Handcrafted Jewelry</a>
+                    <a href="shop.html">All New Arrivals</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Client Care</h4>
+                    <a href="about.html">About AMORA</a>
+                    <a href="contact.html">Concierge & Support</a>
+                    <a href="wishlist.html">Your Saved Pieces</a>
+                    <a href="cart.html">Shopping Bag</a>
+                    <a href="contact.html">Shipping & Returns</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Boutique Concierge</h4>
+                    <p>Colombo 07, Sri Lanka</p>
+                    <p>hello@amoraboutique.com</p>
+                    <p>+94 77 123 4567</p>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AMORA BOUTIQUE. All rights reserved.</p>
+                <p>Designed with elegance and passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

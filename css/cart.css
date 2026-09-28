@@ -1,0 +1,22 @@
+/* =========================================================
+   AMORA BOUTIQUE - CART PAGE ENHANCEMENTS
+========================================================= */
+
+.cart-page-header {
+    text-align: center;
+    padding: 70px 20px 50px;
+    background: linear-gradient(180deg, #F9F5F1 0%, var(--color-bg) 100%);
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.cart-page-header h1 {
+    font-size: clamp(38px, 5.5vw, 60px);
+    margin: 10px 0 12px;
+}
+
+.cart-page-header p {
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 15px;
+}

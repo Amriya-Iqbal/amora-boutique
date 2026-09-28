@@ -1,0 +1,447 @@
+/* =========================================================
+   SHOP PAGE
+========================================================= */
+
+.shop-header {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: var(--light-pink);
+}
+
+.shop-header h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(60px, 8vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.shop-header p:last-child {
+    color: var(--gray);
+    max-width: 550px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   SHOP SECTION
+========================================================= */
+
+.shop-section {
+    padding: 80px 0 100px;
+    background: white;
+}
+
+
+/* =========================================================
+   SHOP CONTROLS
+========================================================= */
+
+.shop-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-box input,
+.shop-controls select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--border);
+    background: white;
+    padding: 0 18px;
+    outline: none;
+    color: var(--dark);
+}
+
+.search-box input:focus,
+.shop-controls select:focus {
+    border-color: var(--dark-pink);
+}
+
+
+/* =========================================================
+   PRODUCT RESULT
+========================================================= */
+
+.shop-result {
+    margin-bottom: 25px;
+}
+
+.shop-result p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SHOP PRODUCT GRID
+========================================================= */
+
+.shop-product-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.shop-product-card {
+    position: relative;
+    background: white;
+}
+
+.shop-product-card .product-image {
+    position: relative;
+}
+
+
+/* Product labels */
+
+.product-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    background: white;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Product actions */
+
+.product-actions {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+.shop-product-card:hover .product-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-action-btn {
+    flex: 1;
+    min-height: 42px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-action-btn:hover {
+    background: var(--dark);
+    color: white;
+}
+
+
+/* Product category */
+
+.product-category {
+    color: var(--dark-pink);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* No results */
+
+.no-products {
+    display: none;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.no-products h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.no-products p {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   RESPONSIVE SHOP
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .shop-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .shop-controls {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .shop-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-header {
+        padding: 70px 20px;
+    }
+
+    .shop-section {
+        padding: 60px 0;
+    }
+
+}
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-detail-section {
+    padding: 90px 0;
+    background: white;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+    align-items: start;
+}
+
+
+/* Product image */
+
+.product-detail-image {
+    background: #f6eeee;
+    overflow: hidden;
+}
+
+.product-detail-image img {
+    width: 100%;
+    max-height: 750px;
+    object-fit: cover;
+}
+
+
+/* Product information */
+
+.product-detail-info {
+    padding-top: 20px;
+}
+
+.product-detail-category {
+    color: var(--dark-pink);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-detail-info h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 0.95;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.product-detail-price {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.product-detail-description {
+    color: var(--gray);
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+
+/* Product options */
+
+.product-option {
+    margin-bottom: 25px;
+}
+
+.product-option-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Size buttons */
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.size-button {
+    min-width: 48px;
+    height: 44px;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.size-button:hover,
+.size-button.selected {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+}
+
+
+/* Color buttons */
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.color-button {
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 12px;
+}
+
+.color-button:hover,
+.color-button.selected {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+}
+
+
+/* Quantity */
+
+.quantity-wrapper {
+    display: flex;
+    width: 140px;
+    height: 48px;
+    border: 1px solid var(--border);
+}
+
+.quantity-wrapper button {
+    width: 42px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-wrapper input {
+    width: 55px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+
+/* Actions */
+
+.product-detail-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.add-cart-button {
+    flex: 1;
+}
+
+.wishlist-button {
+    min-width: 150px;
+}
+
+
+/* Back link */
+
+.back-to-shop {
+    display: inline-block;
+    margin-bottom: 35px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--dark);
+    padding-bottom: 5px;
+}
+
+
+/* Related products */
+
+.related-section {
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   PRODUCT RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .product-detail-info {
+        padding-top: 0;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .product-detail-section {
+        padding: 55px 0;
+    }
+
+    .product-detail-info h1 {
+        font-size: 52px;
+    }
+
+    .product-detail-actions {
+        flex-direction: column;
+    }
+
+    .wishlist-button {
+        width: 100%;
+    }
+
+}

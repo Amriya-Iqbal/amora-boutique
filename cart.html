@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag | AMORA BOUTIQUE</title>
+    <meta name="description" content="Review your selected luxury pieces, apply promotional credits, and proceed to secure boutique checkout.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ANNOUNCEMENT BAR
+    ====================================================== -->
+    <div class="announcement-bar">
+        <span>Complimentary tracked shipping on orders over $100</span>
+       
+    </div>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span>AMORA</span>
+                <small>BOUTIQUE</small>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="wishlist.html" class="header-icon-link" aria-label="View Wishlist" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-count header-icon-count">0</span>
+                </a>
+
+                <a href="cart.html" class="header-icon-link active" aria-label="View Shopping Bag" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count header-icon-count">0</span>
+                </a>
+
+                <button type="button" class="mobile-menu-button" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer & Backdrop -->
+    <div class="mobile-nav-overlay"></div>
+    <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+            <div class="logo">
+                <span>AMORA</span>
+                <small>BOUTIQUE</small>
+            </div>
+            <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+        </div>
+
+        <nav class="mobile-drawer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">All Collections</a>
+            <a href="shop.html?category=dresses">Dresses</a>
+            <a href="shop.html?category=tops">Tops & Blouses</a>
+            <a href="shop.html?category=bottoms">Trousers & Skirts</a>
+            <a href="shop.html?category=accessories">Jewelry & Accessories</a>
+            <a href="about.html">Our Atelier Story</a>
+            <a href="contact.html">Concierge & Contact</a>
+        </nav>
+
+        <div class="mobile-drawer-footer">
+            <p>hello@amoraboutique.com</p>
+            <p>+94 77 123 4567 • Colombo, Sri Lanka</p>
+        </div>
+    </aside>
+
+    <!-- =====================================================
+         CART CONTENT
+    ====================================================== -->
+    <main>
+        <section class="cart-page-header">
+            <div class="container">
+                <span class="eyebrow">YOUR ATELIER SELECTION</span>
+                <h1>Shopping Bag</h1>
+                <p>Review your selected pieces before proceeding to complimentary boutique packaging and checkout.</p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 30px;">
+            <div class="container">
+
+                <!-- Empty Cart State -->
+                <div class="empty-state-card" id="empty-cart" style="display: none;">
+                    <div class="icon-wrap">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h2>Your Bag is Currently Empty</h2>
+                    <p>You have not added any pieces to your shopping bag yet. Explore our curated collections to find your signature wardrobe staples.</p>
+                    <a href="shop.html" class="btn btn-primary btn-lg">Explore New Arrivals</a>
+                </div>
+
+                <!-- Active Cart Grid Layout -->
+                <div class="cart-layout" id="cart-content">
+                    <!-- Left: Cart Items & Free Shipping Progress -->
+                    <div>
+                        <div class="shipping-meter-card">
+                            <div class="meter-text" id="shipping-meter-text">
+                                <span>Calculating complimentary shipping progress...</span>
+                            </div>
+                            <div class="meter-bar-track">
+                                <div class="meter-bar-fill" id="shipping-meter-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items-list" id="cart-items">
+                            <!-- Populated dynamically by cart.js -->
+                        </div>
+                    </div>
+
+                    <!-- Right: Sticky Order Summary -->
+                    <aside class="order-summary-box">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal" style="font-weight: 600; color: var(--color-dark);">$0.00</span>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Tracked Boutique Shipping</span>
+                            <span id="cart-shipping" style="font-weight: 600; color: var(--color-dark);">$0.00</span>
+                        </div>
+
+                        <div class="summary-line" id="cart-discount-row" style="display: none; color: var(--color-success);">
+                            <span>Promotional Discount</span>
+                            <span id="cart-discount" style="font-weight: 600;">-$0.00</span>
+                        </div>
+
+                        <div class="summary-line total">
+                            <span>Estimated Total</span>
+                            <span id="cart-total">$0.00</span>
+                        </div>
+
+                        <!-- Promo Code Form -->
+                        <form class="promo-form" id="promo-form">
+                            <input type="text" id="promo-code-input" placeholder="Promo code (e.g. AMORA10)" autocomplete="off">
+                            <button type="submit" class="btn btn-secondary">Apply</button>
+                        </form>
+                        <div id="promo-feedback" style="font-size: 12px; margin-top: -12px; margin-bottom: 16px;"></div>
+
+                        <button type="button" class="btn btn-primary btn-block btn-lg" id="btn-checkout">
+                            Proceed to Checkout <i class="fa-solid fa-lock" style="font-size: 11px; margin-left: 4px;"></i>
+                        </button>
+
+                        <div style="text-align: center; margin-top: 18px; font-size: 12px; color: var(--color-text-muted);">
+                            <i class="fa-solid fa-shield-check"></i> Guaranteed 256-bit Encrypted Checkout
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+         CHECKOUT DEMO MODAL
+    ====================================================== -->
+    <div class="amora-modal-overlay" id="checkout-modal-overlay">
+        <div class="amora-modal">
+            <button type="button" class="modal-close-btn" id="close-modal-btn" aria-label="Close modal">&times;</button>
+            <span class="eyebrow" style="color: var(--color-rose);">AMORA BOUTIQUE CHECKOUT</span>
+            <h2 style="margin: 6px 0 16px; font-size: 28px;">Complete Your Order</h2>
+            <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 24px;">
+                Enter your shipping address to experience our signature atelier packaging and complimentary white-glove dispatch.
+            </p>
+
+            <form id="checkout-demo-form">
+                <div class="form-group">
+                    <label for="checkout-name">Recipient Full Name</label>
+                    <input type="text" id="checkout-name" class="form-control" placeholder="Eleanor Vance" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-email">Notification Email</label>
+                    <input type="email" id="checkout-email" class="form-control" placeholder="eleanor@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-address">Delivery Address</label>
+                    <input type="text" id="checkout-address" class="form-control" placeholder="42 Kensington Square, London" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-card">Payment Card (Demo)</label>
+                    <input type="text" id="checkout-card" class="form-control" placeholder="•••• •••• •••• 4242" value="4242 •••• •••• 4242" readonly>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 24px;">
+                    Confirm & Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span>AMORA</span>
+                        <small>BOUTIQUE</small>
+                    </a>
+                    <p>
+                        Effortless elegance for the modern woman. Timeless couture silhouettes crafted with certified sustainable textiles and mindful artistry.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Collections</h4>
+                    <a href="shop.html?category=dresses">Silk & Evening Dresses</a>
+                    <a href="shop.html?category=tops">Feminine Tops & Blouses</a>
+                    <a href="shop.html?category=bottoms">Tailored Bottoms</a>
+                    <a href="shop.html?category=accessories">Handcrafted Jewelry</a>
+                    <a href="shop.html">All New Arrivals</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Client Care</h4>
+                    <a href="about.html">About AMORA</a>
+                    <a href="contact.html">Concierge & Support</a>
+                    <a href="wishlist.html">Your Saved Pieces</a>
+                    <a href="cart.html">Shopping Bag</a>
+                    <a href="contact.html">Shipping & Returns</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Boutique Concierge</h4>
+                    <p>Colombo 07, Sri Lanka</p>
+                    <p>hello@amoraboutique.com</p>
+                    <p>+94 77 123 4567</p>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AMORA BOUTIQUE. All rights reserved.</p>
+                <p>Designed with elegance and passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

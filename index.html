@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMORA BOUTIQUE | Luxury Women's Fashion & Timeless Elegance</title>
+    <meta name="description" content="Discover timeless women's fashion designed for confidence, beauty, and effortless luxury. Shop dresses, tops, bottoms, and handcrafted accessories.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ANNOUNCEMENT BAR
+    ====================================================== -->
+    <div class="announcement-bar">
+        <span>Complimentary tracked shipping on orders over $100</span>
+        
+    </div>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span>AMORA</span>
+                <small>BOUTIQUE</small>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="wishlist.html" class="header-icon-link" aria-label="View Wishlist" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-count header-icon-count">0</span>
+                </a>
+
+                <a href="cart.html" class="header-icon-link" aria-label="View Shopping Bag" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count header-icon-count">0</span>
+                </a>
+
+                <button type="button" class="mobile-menu-button" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer & Backdrop -->
+    <div class="mobile-nav-overlay"></div>
+    <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+            <div class="logo">
+                <span>AMORA</span>
+                <small>BOUTIQUE</small>
+            </div>
+            <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+        </div>
+
+        <nav class="mobile-drawer-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">All Collections</a>
+            <a href="shop.html?category=dresses">Dresses</a>
+            <a href="shop.html?category=tops">Tops & Blouses</a>
+            <a href="shop.html?category=bottoms">Trousers & Skirts</a>
+            <a href="shop.html?category=accessories">Jewelry & Accessories</a>
+            <a href="about.html">Our Atelier Story</a>
+            <a href="contact.html">Concierge & Contact</a>
+        </nav>
+
+        <div class="mobile-drawer-footer">
+            <p>hello@amoraboutique.com</p>
+            <p>+94 77 123 4567 • Colombo, Sri Lanka</p>
+        </div>
+    </aside>
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="eyebrow">NEW ATELIER COLLECTION 2026</span>
+                    <h1>Elegance in <span>Every Stitch.</span></h1>
+                    <p class="hero-description">
+                        Discover timeless feminine fashion designed for confidence, poise, and effortless luxury. Curated with sustainable pure silks, fine merino wool, and French flax linens.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="shop.html" class="btn btn-primary btn-lg">Explore Collection</a>
+                        <a href="#categories" class="btn btn-secondary btn-lg">Shop by Category</a>
+                    </div>
+                </div>
+
+                <div class="hero-banner-image">
+                    <img src="images/about.png" alt="AMORA Luxury Collection" class="img-main">
+                    <div class="hero-floating-card">
+                        <i class="fa-solid fa-gem"></i>
+                        <div>
+                            <strong>Artisanal Quality</strong>
+                            <span>Hand-finished French seams & pure fibers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CATEGORIES SECTION
+        ====================================================== -->
+        <section class="section" id="categories">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">CURATED SILHOUETTES</span>
+                    <h2>Find Your Signature Style</h2>
+                    <p>Meticulously designed capsule pieces for every mood, evening soirée, and mindful moment.</p>
+                </div>
+
+                <div class="category-grid">
+                    <!-- Category 1 -->
+                    <a href="shop.html?category=dresses" class="category-card">
+                        <img src="images/category1.png" alt="Silk & Satin Dresses" loading="lazy">
+                        <div class="category-card-content">
+                            <h3>Dresses</h3>
+                            <span>Explore Collection <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Category 2 -->
+                    <a href="shop.html?category=tops" class="category-card">
+                        <img src="images/category2.png" alt="Blouses & Knits" loading="lazy">
+                        <div class="category-card-content">
+                            <h3>Tops & Blouses</h3>
+                            <span>Explore Collection <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Category 3 -->
+                    <a href="shop.html?category=bottoms" class="category-card">
+                        <img src="images/category3.png" alt="Tailored Trousers & Skirts" loading="lazy">
+                        <div class="category-card-content">
+                            <h3>Bottoms</h3>
+                            <span>Explore Collection <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Category 4 -->
+                    <a href="shop.html?category=accessories" class="category-card">
+                        <img src="images/category4.png" alt="Handcrafted Jewelry & Bags" loading="lazy">
+                        <div class="category-card-content">
+                            <h3>Accessories</h3>
+                            <span>Explore Collection <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             NEW ARRIVALS (FEATURED PRODUCTS)
+        ====================================================== -->
+        <section class="section" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">JUST ARRIVED AT THE ATELIER</span>
+                    <h2>Featured Arrivals</h2>
+                    <p>The newest limited-edition additions to our permanent collection.</p>
+                </div>
+
+                <!-- Populated dynamically by script.js using products.js -->
+                <div class="product-grid" id="featured-products"></div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="shop.html" class="btn btn-outline btn-lg">View Entire Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             EDITORIAL BRAND BANNER
+        ====================================================== -->
+        <section class="container" style="padding: 40px var(--container-padding);">
+            <div class="editorial">
+                <div class="editorial-image">
+                    <img src="images/banner.png" alt="AMORA Editorial Campaign">
+                </div>
+                <div class="editorial-content">
+                    <span class="eyebrow" style="color: var(--color-gold);">THE ATELIER VISION</span>
+                    <h2>Made to be <span>remembered.</span></h2>
+                    <p>
+                        We reject ephemeral trends in favor of enduring silhouettes that celebrate female grace. Every seam, lining, and button is selected to bring couture elegance into your daily life.
+                    </p>
+                    <div>
+                        <a href="about.html" class="btn btn-rose">Read Our Philosophy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TRUST & ATELIER PROMISES
+        ====================================================== -->
+        <div class="container">
+            <div class="trust-row">
+                <div class="trust-item">
+                    <div class="trust-item-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="trust-item-text">
+                        <h4>Complimentary Shipping</h4>
+                        <p>Free tracked delivery on all orders exceeding $100.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-item-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="trust-item-text">
+                        <h4>Sustainable Luxury</h4>
+                        <p>Certified pure silks, organic cottons & recycled blends.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-item-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                    <div class="trust-item-text">
+                        <h4>30-Day Atelier Returns</h4>
+                        <p>Hassle-free complimentary returns and exchanges.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-item-icon"><i class="fa-solid fa-lock"></i></div>
+                    <div class="trust-item-text">
+                        <h4>Secure Checkout</h4>
+                        <p>End-to-end encrypted 256-bit safe payments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =====================================================
+             NEWSLETTER SUBSCRIPTION
+        ====================================================== -->
+        <section class="section" style="text-align: center;">
+            <div class="container" style="max-width: 680px;">
+                <span class="eyebrow">THE AMORA PRIVILEGE</span>
+                <h2 style="font-size: clamp(34px, 4vw, 48px); margin: 10px 0 16px;">Join Our Private Circle</h2>
+                <p style="color: var(--color-text-secondary); margin-bottom: 28px;">
+                    Receive private previews of new seasonal collections, private salon invitations, and 10% off your initial order.
+                </p>
+                <form class="newsletter-form" style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+                    <input type="email" placeholder="Enter your email address..." required style="flex-grow: 1; height: 50px; padding: 0 20px; border-radius: var(--radius-full); border: 1px solid var(--color-border); outline: none;">
+                    <button type="submit" class="btn btn-primary" style="height: 50px; padding: 0 26px;">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span>AMORA</span>
+                        <small>BOUTIQUE</small>
+                    </a>
+                    <p>
+                        Effortless elegance for the modern woman. Timeless couture silhouettes crafted with certified sustainable textiles and mindful artistry.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Collections</h4>
+                    <a href="shop.html?category=dresses">Silk & Evening Dresses</a>
+                    <a href="shop.html?category=tops">Feminine Tops & Blouses</a>
+                    <a href="shop.html?category=bottoms">Tailored Bottoms</a>
+                    <a href="shop.html?category=accessories">Handcrafted Jewelry</a>
+                    <a href="shop.html">All New Arrivals</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Client Care</h4>
+                    <a href="about.html">About AMORA</a>
+                    <a href="contact.html">Concierge & Support</a>
+                    <a href="wishlist.html">Your Saved Pieces</a>
+                    <a href="cart.html">Shopping Bag</a>
+                    <a href="contact.html">Shipping & Returns</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Boutique Concierge</h4>
+                    <p>Colombo 07, Sri Lanka</p>
+                    <p>hello@amoraboutique.com</p>
+                    <p>+94 77 123 4567</p>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AMORA BOUTIQUE. All rights reserved.</p>
+                <p>Designed with elegance and passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core JavaScript -->
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
