@@ -2,7 +2,7 @@
 
 A responsive fashion e-commerce website (frontend only).
 
-Live Demo: https://YOUR-USERNAME.github.io/amoura/
+Live Demo: https://amriya-iqbal.github.io/amora-boutique/
 
 Note: This is a frontend-only project. There is no backend or database.
 Cart and wishlist data are saved in the browser (localStorage).
