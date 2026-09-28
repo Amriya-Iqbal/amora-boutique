@@ -19,9 +19,6 @@ A responsive fashion e-commerce website built with HTML, CSS and JavaScript.
 
 ## Tech Stack
 
-HTML5, CSS3, JavaScript
+HTML, CSS, JavaScript
 
-## Run Locally
-
-git clone https://github.com/Amriya-Iqbal/amora-boutique.git
 
